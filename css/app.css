@@ -21,3 +21,11 @@ body {
     font-family: 'Overpass', sans-serif;
 }
 
+.card-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--black-gradient);
+}
