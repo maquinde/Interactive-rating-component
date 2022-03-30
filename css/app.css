@@ -16,16 +16,23 @@
 }
 
 body {
-    background-color: black;
+    background-color: var(--very-dark-blue);
     color: white;
     font-family: 'Overpass', sans-serif;
 }
 
 .card-container {
     width: 90%;
+    height: 100vh;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .card {
     background: var(--black-gradient);
+    border-radius: 0.938rem;
 }
