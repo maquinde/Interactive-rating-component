@@ -29,10 +29,21 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .card {
     background: var(--black-gradient);
     border-radius: 0.938rem;
+}
+
+.text-header {
+
+}
+
+.text-paragraph {
+
+}
+
+.rating {
+    display: flex;
 }
