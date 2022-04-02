@@ -19,10 +19,12 @@ body {
     background-color: var(--very-dark-blue);
     color: white;
     font-family: 'Overpass', sans-serif;
+    position: relative;
 }
 
 .card-container {
     width: 90%;
+    max-width: 328px;
     height: 100vh;
     margin: 0 auto;
     display: flex;
@@ -34,16 +36,100 @@ body {
 .card {
     background: var(--black-gradient);
     border-radius: 0.938rem;
+    padding: 25px 25px 40px 25px;
+    z-index: 2;
 }
 
 .text-header {
-
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 32px;
+    padding: 20px 0;
 }
 
 .text-paragraph {
-
+    color: var(--light-gray);
+    line-height: 25px;
+    font-weight: 400;
 }
 
 .rating {
     display: flex;
+    font-size: 16px;
+    color: var(--medium-gray);
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
 }
+
+.circle:hover {
+    background-color: var(--medium-gray);
+}
+
+.circle, .circle-star {
+    background-color: var(--dark-blue);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 18px;
+    transition: background-color, 500ms;
+}
+
+.circle:hover {
+    background-color: var(--medium-gray);
+    cursor: pointer;
+}
+
+.star.circle-star {
+    text-align: center;
+    padding: 16px;
+}
+
+.submit-button {
+    background-color: var(--orange);
+    border-radius: 30px;
+    border: none;
+    padding: 20px;
+    color: white;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: background-color, 500ms;
+}
+
+.submit-button:hover {
+    background-color: white;
+    color: var(--orange);
+    cursor: pointer;
+}
+
+.card.thank-you {
+    text-align: center;
+}
+
+.mobile-image {
+    padding: 20px 0;
+}
+
+.rating-output {
+    background-color: var(--dark-blue);
+    color: var(--orange);
+    width: 60%;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 30px;
+    margin: 0 auto;
+}
+
+.thank-you-text {
+    margin-top: 15px;
+}
+
+.display {
+    display: none;
+}
+
