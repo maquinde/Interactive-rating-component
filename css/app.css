@@ -141,7 +141,7 @@ body {
     display: none;
 }
 
-.selected {
+.active {
     background-color: var(--orange);
     color: white;
 }
