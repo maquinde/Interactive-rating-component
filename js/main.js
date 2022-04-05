@@ -1,18 +1,4 @@
-function submission(this){
-    let content = this.textContent;
-    //eventListener on button
-    //check if user selected an option
-        //if no option, show error message
-        //if option, proceed
-    //add textContent to span
-    //add display class to card
-    //remove display class from thank-you
-}
-
-
-
 //This is for the rating selection
-
 //assigns all rating classes to a constant variable
 const choices = document.querySelectorAll('.one, .two, .three, .four, .five');
 
@@ -27,7 +13,45 @@ for (let choice of choices){
 
         //on click, adds active to selected choice
         this.classList.add('active');
-        //try getting the 'this' element contents and store in variable
         console.log('active class added');
     });
 }
+
+
+
+
+//Not my code
+'use strict';
+
+const ratingCard = document.querySelector('.rating-card');
+const thankYouCard = document.querySelector('.thank-you-card');
+const submitButton = document.querySelector('.submit');
+const paragraphText = document.querySelector('.printed-result');
+const ratingCircles = document.querySelectorAll('.circle');
+let rating;
+
+ratingCircles.forEach(function (circle) {
+  circle.addEventListener('click', function () {
+    ratingCircles.forEach(function (ratingCircle) {
+      if (circle === ratingCircle) {
+        ratingCircle.classList.add('submit-clicked');
+      } else {
+        ratingCircle.classList.remove('submit-clicked');
+      }
+    });
+    rating = Number(circle.textContent);
+  });
+});
+
+
+
+
+submitButton.addEventListener('click', function () {
+  if (!rating) {
+    alert('Please select a rating before proceeding');
+  } else {
+    ratingCard.classList.add('hidden');
+    thankYouCard.classList.remove('hidden');
+    paragraphText.textContent = `You selected ${rating} out of 5`;
+  }
+});
